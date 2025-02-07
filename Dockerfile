@@ -28,5 +28,5 @@ FROM openjdk:17-alpine
 WORKDIR /myapp
 # 프로젝트 빌드 후 생성된 jar 파일을 런타임 이미지로 복사
 COPY --from=build /myapp/build/libs/*.jar /myapp/getRandanalysticsservice.jar
-EXPOSE 9200
+EXPOSE 5004
 ENTRYPOINT ["java", "-jar", "/myapp/getRandanalysticsservice.jar"]
